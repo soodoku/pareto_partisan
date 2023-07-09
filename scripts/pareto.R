@@ -1,8 +1,5 @@
 # Pareto Party
 
-# set dir.
-setwd(githubdir)
-
 # Load libs
 library(tidyverse)
 library(readstata13)
@@ -46,7 +43,7 @@ cces %>%
 
 cces %>%
 	group_by(UCMjobstreat, UCMjobsparty) %>%
-	summarize(mean_support = mean(jobsn, na.rm = T))
+	summarize(mean_support = mean(jobsn, na.rm = T), n = n())
 
 cces %>%
 	filter(race == 1) %>%
