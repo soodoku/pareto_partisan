@@ -1,4 +1,4 @@
-## Pareto Partisan: Are Partisans Willing to Bite Their Purse to Spite the Main Opposing Party?
+## Pareto Partisan: Are Partisans Willing to Bite Their Co-Partisans to Spite the Opposing Partisans?
 
 One of the deepest concerns about group-based affect is that partisans will make policy choices motivated by spite. We fear that partisans will choose an option that is strictly worse for everyone as long as opposing party supporters get less than co-partisans. We test this on the CCES. When offered the choice between picking a highway plan that allocates $11B to co-partisan states and $12B to opposing partisan states and a plan that offers $10B to co-partisans and $9B to opposing partisans, we find that just a third of Democrats and a fourth of Republicans choose the more generous plan. The competing explanation for the results is that people do not like the government disbursing money for highways and hence opt for an option that allocates a smaller amount.
 
