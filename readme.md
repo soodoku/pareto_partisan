@@ -15,11 +15,11 @@ Which plan do you support? — Smith Plan or Williams Plan?
 
 We also asked a similar question that probes the policy consequences of racial affect.
 
-John Bowen, a candidate seeking your party’s nomination for Congress in another state has made a new jobs plan the centerpiece of his campaign.  His plan has received a lot of media attention. The bipartisan Congressional Budget Office has evaluated his plan and concluded it will help create jobs, but that the benefits will not be the same for all Americans. 
+John Bowen, a candidate seeking your party's nomination for Congress in another state has made a new jobs plan the centerpiece of his campaign.  His plan has received a lot of media attention. The bipartisan Congressional Budget Office has evaluated his plan and concluded it will help create jobs, but that the benefits will not be the same for all Americans. 
 
-  Specifically, the report predicts that the average black family making $50,000 will see a 7 percent increase in income and the average white family making $50,000 will see a 5 percent increase in income.
+  Specifically, the report predicts that the average black family making \$50,000 will see a 7 percent increase in income and the average white family making $50,000 will see a 5 percent increase in income.
 
-  Specifically, the report predicts that the average white family making $50,000 will see a 7 percent increase in income and the average black family making $50,000 will see a 5 percent increase in income.
+  Specifically, the report predicts that the average white family making \$50,000 will see a 7 percent increase in income and the average black family making $50,000 will see a 5 percent increase in income.
 
 
 Based on this information, how likely would you be to vote for John in this primary?
