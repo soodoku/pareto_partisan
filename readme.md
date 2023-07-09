@@ -4,9 +4,9 @@ One of the deepest concerns about group-based affect is that partisans will take
 
 ### Treatments
 
-<img src = "data/highway_plan/Blue.png">
+<img src = "data/highway_plan/Blue.png" width = 50%>
 
-<img src = "data/highway_plan/Red.png">
+<img src = "data/highway_plan/Red.png" width = 50%>
 
 Which plan do you support? — Smith Plan or Williams Plan?
 
