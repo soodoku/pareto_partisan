@@ -39,23 +39,28 @@ cces$jobsn <- car::recode(cces$UCMjobs, "6 = 1; 5 = .8; 4 = .6; 3 = .4; 2 = .2; 
 
 cces %>%
 	group_by(UCMjobstreat) %>%
-	summarize(mean_support = mean(jobsn, na.rm = T))
-
-cces %>%
-	group_by(UCMjobstreat, UCMjobsparty) %>%
-	summarize(mean_support = mean(jobsn, na.rm = T), n = n())
-
-cces %>%
-	filter(race == 1) %>%
-	group_by(UCMjobstreat, UCMjobsparty, pid3lean) %>%
-	filter(!is.na(pid3lean) & pid3lean != 0) %>%
-	summarize(mean_support = mean(jobsn, na.rm = T), n = n()) %>%
-	arrange(desc(pid3lean, UCMjobstreat))
+	summarize(mean_support = mean(jobsn, na.rm = T), n = n(), se = sd(jobsn, na.rm = T)/sqrt(n))
 
 # 1 = black
 # 2 is white
 
 cces %>%
+  group_by(race, UCMjobstreat) %>%
+  summarize(mean_support = mean(jobsn, na.rm = T), n = n(), se = sd(jobsn, na.rm = T)/sqrt(n))
+
+cces %>%
+	group_by(UCMjobstreat, UCMjobsparty) %>%
+	summarize(mean_support = mean(jobsn, na.rm = T), n = n(), se = sd(jobsn, na.rm = T)/sqrt(n))
+
+cces %>%
+	filter(race == 1) %>%
+	group_by(UCMjobstreat, UCMjobsparty, pid3lean) %>%
+	filter(!is.na(pid3lean) & pid3lean != 0) %>%
+	summarize(mean_support = mean(jobsn, na.rm = T), n = n(), se = sd(jobsn, na.rm = T)/sqrt(n)) %>%
+	arrange(desc(pid3lean, UCMjobstreat))
+
+
+cces %>%
 	filter(race == 1) %>%
 	group_by(UCMjobstreat, pid3_lab) %>%
-	summarize(mean_support = mean(jobsn, na.rm = T))
+	summarize(mean_support = mean(jobsn, na.rm = T), n = n(), se = sd(jobsn, na.rm = T)/sqrt(n))
