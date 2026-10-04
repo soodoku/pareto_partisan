@@ -1,0 +1,22 @@
+Package: paretopartisan
+Type: Project
+Title: Pareto Partisan? Relative Gains and Support for Public Policy
+Version: 0.1.0
+Authors@R: c(
+    person("Gaurav", "Sood", role = c("aut", "cre"), email = "gsood07@gmail.com"),
+    person("Alexander G.", "Theodoridis", role = "aut"))
+Description: Reproducible analysis of allocation choices and randomized income
+    scenarios in the 2018 Cooperative Congressional Election Study, with
+    verified coding, uncertainty estimates, and a generated research note.
+Encoding: UTF-8
+Imports:
+    digest,
+    ggplot2,
+    haven,
+    sandwich
+Suggests:
+    lintr,
+    renv,
+    styler,
+    testthat
+Config/testthat/edition: 3

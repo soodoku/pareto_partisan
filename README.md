@@ -1,0 +1,71 @@
+# Pareto Partisan?
+
+**Relative Gains and Support for Public Policy**
+
+Gaurav Sood and Alexander G. Theodoridis
+
+[Read the paper](ms/main.pdf) · [Research design](docs/design.md) · [Data and reproduction](docs/data.md)
+
+## TL;DR
+
+**The benchmark is that everyone chooses more for both sides over less for both. Observed choices fall far short.** In a 2018 CCES highway question, one plan allocated **$11B to states associated with one’s own party and $12B to the other side**; the alternative allocated **$10B and $9B**. Only **35.0% of Democrats and 27.1% of Republicans chose the plan giving both sides more**. The rest chose less for both, with their own side ahead.
+
+A post-election experiment holds respondents’ own-party income gain at **5%**. Raising the opposing party’s gain from **3% to 7%** changes support by **-20.0 points** on a 0–100 scale (95% CI [-23.9, -16.1]). The changes are -24.1 points among Democrats and -14.9 among Republicans. If people care only about their side’s stated gain, support should stay the same; if they also welcome opponents’ gains, it should not fall.
+
+The highway benchmark assumes that larger allocations are preferred and that other costs and attributes do not matter. Because the larger plan also costs more, its rejection does not by itself establish partisan spite or rejection of a Pareto improvement in net welfare. The income experiment provides stronger evidence that opponents’ relative gains affect support even when own-party gains stay fixed. It does not separate hostility toward opponents from dislike of falling behind.
+
+## Benchmarks and findings
+
+| Exercise | Benchmark | Finding |
+| --- | --- | --- |
+| Highway choice | 100% select the plan giving both sides more, under monotonic preferences over the displayed allocations and no other relevant differences | 31.5% do; a 68.5-percentage-point shortfall |
+| Income experiment | Increasing opponents’ gain while holding own-party gain fixed does not reduce support | Support falls from 46.7 to 26.7; difference -20.0 [95% CI [-23.9, -16.1]] |
+
+The 100% highway benchmark is an idealized prediction, not an estimated population fact. Comparing choices with 50% would ask which plan wins a majority and miss the stricter question. We report the size of the departure rather than a test against exactly 100%, which an error-free model would reject after a single contrary choice. Neither exercise puts respondents’ money at risk or measures the share willing to incur personal losses.
+
+## What the study does
+
+Both exercises come from the UC Merced module of the 2018 Cooperative Congressional Election Study, administered online by YouGov.
+
+| Exercise | Comparison | Main analysis |
+| --- | --- | --- |
+| Pre-election highway choice | Two named plans; the smaller plan funds both sides less but favors one’s own side | 1,374 answers from 1,380 eligible partisans; descriptive choice shares |
+| Post-election income experiment | Own-party gain stays at 5%; opponents gain 3% or 7% | 911 partisans, with no missing outcome among those assigned; differences in support |
+
+Party leaners count as partisans. The highway analysis uses pre-election identification; the income analysis uses the updated post-election identification that exactly matches the delivered routing. The main estimates use the full delivered sample without survey weights. Matched-sample, team-weighted, and strict-identifier estimates are reported separately.
+
+In the income experiment, estimated support falls from 46.7 to 26.7 on the 0–100 scale. The share somewhat or strongly supporting the plan falls from 28.5% to 9.9%. The result therefore does not depend only on treating the five response categories as equally spaced.
+
+The materials describe random assignment of the income images, but do not include execution logs. The analysis estimates the 7%-versus-3% contrast within each party and combines those differences using fixed partisan shares. It does not treat party membership as randomized. These are hypothetical policy evaluations from an online sample, not observed spending or income losses. Matching and weighting require additional assumptions for population generalization.
+
+The appendix reports a separate randomized race-and-jobs vignette already present in the survey. It changes which racial group receives a larger income gain, so it answers a different question from the fixed-own-gain partisan experiment.
+
+## Reproduce
+
+Use R 4.6.0, GNU Make, XeLaTeX, and `latexmk`. R dependencies are pinned in `renv.lock`.
+
+```sh
+make restore
+make check
+```
+
+`make check` rebuilds the analysis, tables, figures, README, and manuscript, then runs R linting and tests. `make analysis` produces the CSV results; `make paper` produces the PDF. Reproduction uses only the public files.
+
+| Path | Contents |
+| --- | --- |
+| `data/raw/cces2018.csv` | Numeric survey responses, matched-sample indicator, and synthetic row identifier |
+| `data/materials/` | Questionnaires, codebook, and original stimulus images |
+| `R/` | Shared coding, estimators, and figure style |
+| `scripts/` | Analysis, figures, tables, and optional export from original deliveries |
+| `tabs/`, `figs/` | Generated results and publication exhibits |
+| `ms/` | Manuscript source, references, and compiled paper |
+| `docs/` | Design, data dictionary, source hashes, validation, and claim-to-output ledger |
+| `tests/` | Coding, routing, sample accounting, and independent estimator checks |
+
+The authors retain the complete original survey deliveries separately. The optional export step selects the documented analysis fields without changing those originals. See [data documentation](docs/data.md).
+
+## Citation
+
+Sood, Gaurav, and Alexander G. Theodoridis. *Pareto Partisan? Relative Gains and Support for Public Policy*. Research note. Machine-readable metadata are in [CITATION.cff](CITATION.cff).
+
+The README is generated from `docs/README.md.in` and the analysis outputs.

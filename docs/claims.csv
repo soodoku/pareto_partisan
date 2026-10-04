@@ -1,0 +1,11 @@
+claim,estimand_universe,source,producer,artifact,uncertainty_scope,location
+Highway larger-plan choice,100 minus lower-plan share; full including leaners; observed answers,"data/raw/cces2018.csv: UCMpareto,pid7",scripts/run_all.R; scripts/tables.R,tabs/highway.csv; tabs/highway_primary.tex,Wilson; observed respondent denominator,Abstract; introduction; highway; README
+Highway universal-selection shortfall,lower-plan share equals percentage-point shortfall from 100% larger-plan choice,same,scripts/tables.R,tabs/macros.tex: HighwayPoolEstimate,Same uncertainty as complementary choice share; benchmark conditional,Highway; README
+Income pooled effect,7%-minus-3% opponent gain; own gain 5%; full post-election partisans including leaners,"UCMincrease,UCMincrease_treat,CC18_421a,CC18_421b",scripts/run_all.R,tabs/primary.csv,Independent cells; fixed eligible party shares; Welch,Abstract; income; README
+Income party effects,Within updated respondent party; high-minus-low opponent gain,same,scripts/run_all.R,tabs/primary.csv,Welch independent groups,Income; README
+Income binary support/opposition,Responses 1-2 support; 4-5 oppose; differences in percentage points,same,scripts/run_all.R,tabs/primary.csv,Welch; fixed shares,Income; README
+Sample and identity robustness,Full/matched/team weighted; including leaners/strict identifiers,"same plus matched,teamweight",scripts/run_all.R,tabs/income_effects.csv; tabs/highway.csv,Welch or weighted HC3; changed represented samples,Figures; appendix
+Party effect difference,Democratic high-low minus Republican high-low,same,scripts/run_all.R,tabs/party_effect_difference.csv,Four-cell Welch; exploratory,Income
+Jobs contrast,Black-advantage minus White-advantage; vote likelihood; full observed,"UCMjobs,UCMjobstreat,race,pid7",scripts/run_all.R,tabs/jobs.csv,Welch; exploratory overlapping subgroups,Appendix B
+Nonpartisan income effect,No own-party interpretation; standardize by party held at 5%,income source fields,scripts/run_all.R,tabs/nonpartisans.csv,Welch; exploratory,Appendix B
+Monotonicity benchmarks,100% larger-plan selection; nonnegative income support effect,Displayed benefits plus explicit behavioral assumptions,Analytical implication,docs/design.md,Not an estimated or preregistered null,Introduction; discussion; README

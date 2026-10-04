@@ -1,0 +1,17 @@
+"party_pre","party_post","Freq"
+"Democrat","Democrat",481
+"Nonpartisan","Democrat",17
+"Republican","Democrat",7
+,"Democrat",0
+"Democrat","Nonpartisan",13
+"Nonpartisan","Nonpartisan",111
+"Republican","Nonpartisan",17
+,"Nonpartisan",0
+"Democrat","Republican",3
+"Nonpartisan","Republican",13
+"Republican","Republican",390
+,"Republican",0
+"Democrat",,274
+"Nonpartisan",,104
+"Republican",,195
+,,0

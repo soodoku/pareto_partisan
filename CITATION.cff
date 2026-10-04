@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "Please cite the research note when using these data, analyses, or findings."
+type: software
+title: "Pareto Partisan? Relative Gains and Support for Public Policy"
+authors:
+  - family-names: Sood
+    given-names: Gaurav
+  - family-names: Theodoridis
+    given-names: Alexander G.
+version: 0.1.0
+repository-code: "https://github.com/soodoku/pareto_partisan"
+url: "https://github.com/soodoku/pareto_partisan"
+keywords:
+  - partisanship
+  - relative gains
+  - survey experiments
+  - political behavior
+preferred-citation:
+  type: report
+  title: "Pareto Partisan? Relative Gains and Support for Public Policy"
+  authors:
+    - family-names: Sood
+      given-names: Gaurav
+    - family-names: Theodoridis
+      given-names: Alexander G.
+  year: 2026
+  url: "https://github.com/soodoku/pareto_partisan/blob/main/ms/main.pdf"
